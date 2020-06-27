@@ -1,0 +1,256 @@
+@import "reset.less";
+
+/*对进度条的整体操作*/
+
+.progress-mixin(){
+
+  /*相对定位*/
+  //position: relative;
+
+}
+
+/* 设置外部div的样式 */
+
+#wrap{
+
+  /*设置高为100%,横向滚动条自动,纵向滚动条隐藏,并设置背景颜色,干掉字体大小*/
+
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: #383838;
+  font-size: 0;
+
+  /*设置内部的控件样式*/
+
+  .controls{
+
+    /*最小宽度为600px,相对脱标,高为25px,背景色*/
+
+    min-width: 600px;
+    position: relative;
+    height: 25px;
+    background-color: #2A2A2A;
+
+    /*设置左侧按钮样式*/
+
+    .btns-controls{
+
+      /*绝对定位,left和top为0,宽55px,高25px,文本居中*/
+
+      position: absolute;
+      left:0;
+      top:0;
+      width: 55px;
+      height: 25px;
+      text-align: center;
+
+      /*设置内部的span样式*/
+
+      &>span{
+
+        /*设置inline-block,宽为9px,高11px,背景icon.png,不平铺,marginTop:7px*/
+
+        display: inline-block;
+        width: 9px;
+        height: 11px;
+        background: url("../img/icon.png") no-repeat;
+        margin-top: 7px;
+
+        /*设置第一个span的背景position为0 -23px marginRight为10px*/
+        &:nth-child(1){
+          background-position: 0px -23px;
+          margin-right: 10px;
+
+          /*设置切换的类样式的背景*/
+
+          &.active{
+            background-position: 0px -11px;
+          }
+        }
+
+        &:nth-child(2){
+          background-position: 0px 0px;
+        }
+
+      }
+
+    }
+
+    /*设置进度条的样式*/
+
+    .progress{
+
+      /*margin右侧230px,左侧55px,高25px,*/
+
+      margin: 0 230px 0 55px;
+      height: 25px;
+      /*.progress-mixin();*/
+
+      position: relative;
+
+      &>.container-pro{
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        margin-top: -15px;
+        background: #737373;
+        .inner-drag{
+          position: absolute;
+          width: 9px;
+          height: 7px;
+          background: white;
+          border-radius:2px ;
+          margin-top: -2px;
+        }
+      }
+      &>.inner-pro{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 3px;
+        margin-top: 11px;
+        background: deeppink;
+      }
+
+
+    }
+
+    /*音量控制区样式*/
+    .time-sound-screen-controls{
+
+      /*绝对定位,right和bottom都是0,宽230px,高25px,*/
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 230px;
+      height: 25px;
+      /*z-index:2暂时不写*/
+
+      /*里面所有的idv高度为25px,全部左浮动*/
+
+      &>div{
+        height: 25px;
+        float: left;
+      }
+
+      /*设置时间的样式*/
+
+      .time{
+        /*宽120px,字体12px,前景白色,行高25px,居中*/
+        width: 120px;
+        font-size: 12px;
+        color: white;
+        line-height: 25px;
+        text-align: center;
+      }
+
+      /*声音进度控制样式*/
+
+      .sound{
+
+        /*宽80px*/
+
+        width: 80px;
+
+        /*里面的div高25px,向左浮动*/
+        &>div{
+          height: 25px;
+          float: left;
+        }
+
+        /*静音样式*/
+
+        .muted-constrols{
+
+          /*宽为20px,文本居中*/
+          width: 20px;
+          text-align: center;
+
+          /*里面所有的span变为inline-block,设置margin 7px auto,宽和高为12px,背景icon.png不平铺,背景的position 0 -34px*/
+
+          &>span{
+            display: inline-block;
+            margin: 7px auto;
+            width:12px;
+            height: 12px;
+            background: url("../img/icon.png") no-repeat;
+            background-position: 0 -34px;
+          }
+
+        }
+
+        /*音量进度条样式*/
+
+        .sound-progress{
+
+          /*宽为60px*/
+
+          width: 60px;
+
+          /*.progress-mixin();*/
+
+          position: relative;
+          &>.sound-container{
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            margin-top: 11px;
+            background: #737373;
+            .sound-drag{
+              position: absolute;
+              width: 9px;
+              height: 7px;
+              background: white;
+              border-radius:2px ;
+              margin-top: -2px;
+            }
+          }
+          &>.sound-inner-pro{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 3px;
+            margin-top: 11px;
+            background: deeppink;
+          }
+        }
+
+
+      }
+
+      /*全屏样式操作*/
+
+      .full-screen{
+
+        /*宽30px,高25px,文本居中*/
+        width: 30px;
+        height: 25px;
+        text-align: center;
+
+        /*里面的所有的span*/
+
+        &>span{
+
+          /*块级元素,margin:7px auto,宽和高11px,背景icon,不平铺,背景位置,0 -58px*/
+
+          display: inline-block;
+          margin: 7px auto;
+          width: 11px;
+          height: 11px;
+          background: url("../img/icon.png") no-repeat;
+          background-position: 0 -58px;
+
+        }
+
+      }
+
+
+    }
+
+  }
+
+
+}

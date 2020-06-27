@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            background-color: #C7EDCC;
+        }
+
+        canvas {
+            border: 1px solid red;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<canvas id="test" width="400" height="300"></canvas>
+<script type="text/javascript">
+    //页面加载
+    window.onload = function () {
+        //画板
+        var canvas = document.querySelector("#test");
+        //检测绘制对象
+        if (!canvas.getContext) return;
+        //获取绘制对象
+        var ctx = canvas.getContext("2d");
+
+        //绘制一个矩形
+        ctx.fillStyle = "red";
+        ctx.fillRect(0, 0, 100, 100);
+        //获取的是这个矩形的所有的像素数据
+        var imageData = ctx.getImageData(0, 0, 10, 10);
+
+       // console.log(imageData.data.length);
+        //改掉当前这个像素数据中所有的像素的颜色
+        for (var i = 0; i < imageData.data.length; i++) {
+            imageData.data[4 * i] = 0;//红色的值
+            imageData.data[4 * i + 1] = 0;//绿色的值
+            imageData.data[4 * i + 2] = 255;//蓝色
+            imageData.data[4 * i + 3] = 255;//透明
+        }
+
+        //重新把像素数据绘制到画布上
+        /*
+        * 参数1:像素数据
+        * 参数2:横向偏移量----x坐标
+        * 参数3:纵向偏移量----y坐标
+        *
+        *
+        * */
+        ctx.putImageData(imageData,100,100);
+
+
+    }
+</script>
+
+</body>
+</html>

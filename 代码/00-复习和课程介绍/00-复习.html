@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+        *
+        * 复习:
+        *
+        *  DOM操作,主要是操作页面的元素的
+        * 先获取页面元素
+        * document.getElementById(id属性的值)---单个的
+        * document.getElementsByClassName(类样式的名字)----多个的
+        * document.getElementsByTagName(标签名字)---多个的
+        * document.getELementByName(name属性的值)---多个的
+        * document.querySelector(选择器)---单个的
+        * document.querySelectorAll(选择器)---多个的
+        *
+        * 事件:就是一件事,
+        * 需要有事件源,触发和响应
+        * 事件应有事件的类型: onclick onmousemove onmouseenter onmouseout onmouseover  onchange oninput onfocus onblur
+        * 为元素添加事件: 对象.on事件的名字=事件处理函数---匿名函数
+        * btnObj.onclick=function (){};
+        * 函数: 命名函数和匿名函数
+        * 命名函数:有名字的函数
+        * 匿名函数:没有名字
+        * 函数的自调用: (function (){})();执行一次
+        * DOM操作中:事件的添加和移除
+        * 对象.addEventListener("事件的名字",事件处理函数,布尔值);事件的名字是没有on,
+        * 对象的removeEventListener("事件的名字",事件处理函数,布尔值)
+        *
+        * 总结:推荐使用addEventListener()和removeEventListener()的方式添加事件和一簇事件
+        *
+        *
+        *
+        *
+        *
+        *
+        * */
+        //函数的声明
+        // function f1() {
+        //     console.log("真好");
+        // }
+        // //函数调用
+        // ( function f1() {
+        //     console.log("真好");
+        // })();
+        // console.log(f1);//-----函数的声明的代码---函数体
+
+
+
+        /*
+        *
+        * 复习:
+        * Canvas的绘制
+        * 画圆
+        * 绘制对象.arc(圆心的x,圆心的y,半径,起始的度数,结束的度数)
+        * 画弧
+        *
+        * 绘制对象.arcTo(控制点x,控制点y,结束点x,结束y,半径);
+        * 画二次贝塞尔曲线
+        * .moveTo(x,y)
+        * quadraticCurveTo(控制点x,控制点y,结束点x,结束点y);
+        * 画三次贝塞尔曲线
+        * .moveTo(x,y)
+        *bezierCurveTo(控制点1的x,控制点1的y,控制点2的x,控制点2的y,结束点的x,结束点的y)
+        * Canvas中的变形
+        * 移动原点
+        * translate(x,y)----->移动原点,如果有多个的这个方法的调用,那么原点的移动坐标会累加
+        * 旋转
+        * rotate(度数)------>旋转,旋转后的x轴和y轴会发生变化
+        * 缩放
+        * scale(x轴的缩放因子,y轴的缩放因子);
+        * x是2;指的是:整个x轴的像素都会放大为原来的2倍,所绘制的图形的相对于左侧的距离的值实际上是没有变化的,变化的是像素的大小(包括宽度)
+        * x是0.5:指的是:整个x轴的像素都会缩小为原来的一半
+        *
+        * 绘制图片
+        * 首先:先创建图片对象
+        * var image= new Image()
+        * 然后设置显示图片路径
+        * image.src="路径";
+        * 最后,如果要把图片绘制到画布上,首先要图片有加载的事件(图片加载完毕了才能绘制到画板上)
+        * image.onload=function(){}
+        * 在图片加载的事件中,调用的是: ctx.drawImage(图片对象,横坐标,纵坐标,宽,高);
+        *
+        *
+        * 图像的操作
+        * ctx.createPattern(图片对象,"显示的方式");显示的方式的值: no-repeat,repeat,repeat-x,repeat-y
+        * 线性渐变
+        * var gradient=ctx.createLinearGradient(起始点的横坐标,起始点的纵坐标,结束点横坐标,结束点纵坐标);
+        * 就是一条线  从某个点到某个点的渐变的过程
+        * 渐变的距离和颜色
+        * 对象.addColorStop(0-1的值,颜色);
+        *
+        * 可以把这个gradient对象结果给fillStyle或者是strokeStyle,然后再绘制
+        *
+        * 径向渐变
+        *createRadialGradient(第一个圆心的横坐标,第一个圆心的纵坐标,半径,第二个圆心的横坐标,第二个圆心的纵坐标,半径)
+        * 渐变的过程是从内向外
+        * 也需要配合addColorStop()方法来使用
+        *
+        *
+        *
+        *
+        *
+        *
+        *
+        * */
+
+    </script>
+</head>
+<body>
+<input type="button" value="按钮" id="btn1"/>
+<input type="button" value="干掉第一个按钮的点击事件" id="btn2"/>
+<script type="text/javascript">
+    obj.getContext("2d").createRadialGradient(图片的对象)
+    //页面加载的事件省略
+    // var btnObj1 = document.getElementById("btn1");
+    // var btnObj2 = document.getElementById("btn2");
+    // // btnObj1.addEventListener("click",f1);
+    // btnObj1.addEventListener("click",f2);
+    // function f1() {
+    //     console.log("今天天气真好");
+    // }
+    // function f2(){
+    //     console.log("2");
+    // }
+    // btnObj2.addEventListener("click",function () {
+    //    btnObj1.removeEventListener("click",f1);
+    // });
+    // btnObj1.onclick=function () {
+    //   console.log("其他的老师都很帅");
+    // };
+    // btnObj1.onclick=function () {
+    //   console.log("好象是杨哥才是最帅的");
+    // };
+
+
+</script>
+</body>
+</html>

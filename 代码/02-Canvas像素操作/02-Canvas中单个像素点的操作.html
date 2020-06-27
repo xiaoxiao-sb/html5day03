@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            background-color: #C7EDCC;
+        }
+
+        canvas {
+            border: 1px solid red;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<canvas id="test" width="400" height="400"></canvas>
+<script type="text/javascript">
+    //页面加载
+    window.onload = function () {
+
+        //操作单个的像素点
+        //画板
+        var canvas = document.querySelector("#test");
+        //检测绘制对象
+        if (!canvas.getContext) return;
+        //获取绘制对象
+        var ctx = canvas.getContext("2d");
+        //先绘制一个填充矩形
+        ctx.save();
+        ctx.fillStyle="green";
+        ctx.fillRect(100,100,100,100);
+        ctx.restore();
+
+        //给我一个坐标,我要获取这个坐标的像素点的颜色
+        //获取一个像素数据
+        var imageData=ctx.getImageData(0,0,canvas.width,canvas.height);
+        var x=150,y=150;
+        //整个坐标的颜色值
+        var color=getPxColor(imageData,x,y);
+        console.log(color);
+        //设置某个像素点的颜色值(像素数据,坐标x,y,颜色)
+
+        //var x1=50,y1=50;
+
+
+        for(var i=0;i<canvas.width;i++){
+            setPxColor(imageData,i,50,[0,0,255,255]);//仅仅是改变了这个像素数据中的某个像素点的颜色(四个小点值)
+        }
+        //是把改变颜色后的像素数据重新的绘制到我的画板上了
+        ctx.putImageData(imageData,0,0);
+
+
+
+        function setPxColor(imageData,x,y,color) {
+            var width=imageData.width;
+            imageData.data[(y*width+x)*4]=color[0];
+            imageData.data[(y*width+x)*4+1]=color[1];
+            imageData.data[(y*width+x)*4+2]=color[2];
+            imageData.data[(y*width+x)*4+3]=color[3];
+        }
+
+        //给我像素数据,横坐标,和纵坐标,我就把这个坐标的颜色给你返回去
+        function getPxColor(imageData,x,y) {
+            var color=[];
+            var width=imageData.width;//宽--像素的个数
+            color[0]=imageData.data[(y*width+x)*4];
+            color[1]=imageData.data[(y*width+x)*4+1];
+            color[2]=imageData.data[(y*width+x)*4+2];
+            color[3]=imageData.data[(y*width+x)*4+3];
+            return color;
+        }
+    }
+</script>
+
+</body>
+</html>

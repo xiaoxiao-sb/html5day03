@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        html,body{
+            background-color: #C7EDCC;
+        }
+        canvas{
+            border:2px solid red;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<canvas id="test" width="300" height="200"></canvas>
+<script type="text/javascript">
+
+    window.onload=function () {
+
+
+        var canvas = document.getElementById('test');
+        var ctx = canvas.getContext('2d');
+        var text = '开心';
+        function drawText(){
+            //字体大小
+            ctx.font="40px sans-serif";
+            //字体颜色
+            ctx.fillStyle="red";
+            //设置字体在基线中间
+            ctx.textBaseline="middle";
+            //设置字体居中
+            ctx.textAlign="center";
+            //绘制字体
+            ctx.fillText(text,canvas.width/2,canvas.height/2);
+        }
+        drawText();
+        lineCenter();
+        function lineCenter(){
+            ctx.save();
+            ctx.beginPath();
+            ctx.moveTo(canvas.width/2,0);
+            ctx.lineTo(canvas.width/2,canvas.height);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(0,canvas.height/2);
+            ctx.lineTo(canvas.width,canvas.height/2);
+            ctx.stroke();
+            ctx.restore();
+
+        }
+
+    }
+
+
+</script>
+
+</body>
+</html>

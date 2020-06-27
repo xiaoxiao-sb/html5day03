@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2d99da38-43aa-4065-91fd-f08d91c02718" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="04源代码" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/02-Canvas像素操作/04-Canvas中马赛克的制作.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="50" column="63" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
+              <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+                <element signature="e#2057#2383#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/03-Canvas中的合成/01-Canvas中的全局透明.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/03-Canvas合成/02-Canvas中的合成属性.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="42" column="34" lean-forward="true" selection-end-line="75" selection-end-column="7" />
+              <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/03-Canvas中的合成/02-Canvas中的合成属性.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-350">
+              <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+              <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/03-Canvas合成/03-Canvas刮刮卡.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="102" column="22" lean-forward="true" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/03-Canvas中的合成/03-Canvas刮刮卡.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
+              <folding>
+                <element signature="e#2064#2096#0" />
+                <element signature="e#2648#2680#0" />
+                <element signature="e#3115#3147#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/03-Canvas合成/01-Canvas全局透明.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="31" column="16" lean-forward="true" selection-end-line="47" selection-end-column="7" />
+              <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/02-Canvas像素操作/01-Canvas像素操作.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="44" column="9" lean-forward="true" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/02-Canvas像素操作/03-Canvas获取像素数据的问题.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="39" lean-forward="true" selection-end-line="63" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/02-Canvas像素操作/test.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="LessCss" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/01-Canvas绘制文本/04-Canvas中文本的方向.html" />
+        <option value="$PROJECT_DIR$/01-Canvas绘制文本/04-Canvas中文本的方向暂时无效果实验的.html" />
+        <option value="$PROJECT_DIR$/03-Canvas合成/01-Canvas全局透明.html" />
+        <option value="$PROJECT_DIR$/03-Canvas合成/02-Canvas中的合成属性.html" />
+        <option value="$PROJECT_DIR$/03-Canvas合成/test.html" />
+        <option value="$PROJECT_DIR$/04-Canvas导出/01-Canvas导出.html" />
+        <option value="$PROJECT_DIR$/04-Canvas导出/02-Canvas中的事件.html" />
+        <option value="$PROJECT_DIR$/05-音视频操作/01-音视频标签.html" />
+        <option value="$PROJECT_DIR$/05-音视频操作/02-音视频标签兼容写法.html" />
+        <option value="$PROJECT_DIR$/05-音视频操作/03-音视频标签的相关属性.html" />
+        <option value="$PROJECT_DIR$/05-音视频操作/04-音视频标签属性操作.html" />
+        <option value="$PROJECT_DIR$/05-音视频操作/05-音视频相关的函数.html" />
+        <option value="$PROJECT_DIR$/05-音视频操作/06-音视频load函数及不能自动播放.html" />
+        <option value="$PROJECT_DIR$/05-音视频操作/07-音阶导航效果实现.html" />
+        <option value="$PROJECT_DIR$/06-播放器/css/reset.less" />
+        <option value="$PROJECT_DIR$/06-播放器/01-播放器的布局和实现/mycss/index.less" />
+        <option value="$PROJECT_DIR$/06-播放器/03-播放器.html" />
+        <option value="$PROJECT_DIR$/06-播放器/js/drag.js" />
+        <option value="$PROJECT_DIR$/06-播放器/04-播放器功能.html" />
+        <option value="$PROJECT_DIR$/06-播放器/css/index.less" />
+        <option value="$PROJECT_DIR$/06-播放器/05-播放器功能加载时间.html" />
+        <option value="$PROJECT_DIR$/01-Canvas绘制文本/02-Canvas中文本对齐方式.html" />
+        <option value="$PROJECT_DIR$/01-Canvas绘制文本/03-Canvas中文本基于基线对齐.html" />
+        <option value="$PROJECT_DIR$/01-Canvas绘制文本/05-Canvas中文本的宽度获取.html" />
+        <option value="$PROJECT_DIR$/01-Canvas绘制文本/06-Canvas中文本居中.html" />
+        <option value="$PROJECT_DIR$/01-Canvas绘制文本/07-Canvas中文本阴影设置.html" />
+        <option value="$PROJECT_DIR$/02-Canvas像素操作/01-Canvas中像素操作.html" />
+        <option value="$PROJECT_DIR$/02-Canvas像素操作/02-Canvas中单个像素点操作.html" />
+        <option value="$PROJECT_DIR$/02-Canvas像素操作/03-Canvas制作马赛克.html" />
+        <option value="$PROJECT_DIR$/03-Canvas合成/03-Canvas刮刮卡.html" />
+        <option value="$PROJECT_DIR$/00复习和课程介绍/00-复习.html" />
+        <option value="$PROJECT_DIR$/00-复习和课程介绍/00-复习.html" />
+        <option value="$PROJECT_DIR$/00-复习和课程介绍/01-课程介绍.html" />
+        <option value="$PROJECT_DIR$/01-Canvas绘制文本/01-Canvas绘制文本.html" />
+        <option value="$PROJECT_DIR$/01-Canvas绘制文本/02-Canvas绘制文本的对齐方式.html" />
+        <option value="$PROJECT_DIR$/01-Canvas绘制文本/03-Canvas绘制文本基于基线.html" />
+        <option value="$PROJECT_DIR$/code/01-Canvas绘制文本/04-Canvas中文本的方向暂时无效果实验的.html" />
+        <option value="$PROJECT_DIR$/01-Canvas绘制文本/04-Canvas绘制文本的方向暂时无效.html" />
+        <option value="$PROJECT_DIR$/01-Canvas绘制文本/05-Canvas绘制文本获取宽度.html" />
+        <option value="$PROJECT_DIR$/01-Canvas绘制文本/06-Canvas绘制文本居中显示.html" />
+        <option value="$PROJECT_DIR$/01-Canvas绘制文本/07-Canvas绘制文本的阴影.html" />
+        <option value="$PROJECT_DIR$/02-Canvas像素操作/01-Canvas像素操作.html" />
+        <option value="$PROJECT_DIR$/code/03-Canvas合成/03-Canvas刮刮卡.html" />
+        <option value="$PROJECT_DIR$/code/02-Canvas像素操作/01-Canvas中像素操作.html" />
+        <option value="$PROJECT_DIR$/02-Canvas像素操作/02-Canvas中单个像素点的操作.html" />
+        <option value="$PROJECT_DIR$/02-Canvas像素操作/04-Canvas中马赛克的制作.html" />
+        <option value="$PROJECT_DIR$/02-Canvas像素操作/03-Canvas获取像素数据的问题.html" />
+        <option value="$PROJECT_DIR$/02-Canvas像素操作/test.html" />
+        <option value="$PROJECT_DIR$/03-Canvas中的合成/01-Canvas中的全局透明.html" />
+        <option value="$PROJECT_DIR$/03-Canvas中的合成/02-Canvas中的合成属性.html" />
+        <option value="$PROJECT_DIR$/03-Canvas中的合成/03-Canvas刮刮卡.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="width" value="697" />
+    <option name="height" value="745" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="04源代码" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Administrator\Desktop\HTML5_Canvas\03day\04源代码" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="04源代码" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Administrator\Desktop\HTML5_Canvas\03day\04源代码" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="03-Canvas中的合成" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="04源代码" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Administrator\Desktop\HTML5_Canvas\03day\04源代码" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="code" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="04源代码" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Administrator\Desktop\HTML5_Canvas\03day\04源代码" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="code" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="03-Canvas合成" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="04源代码" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Administrator\Desktop\HTML5_Canvas\03day\04源代码" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="code" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="05-音视频操作" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="LESS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/03-Canvas中的合成" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\HTML5_Canvas\03day\04源代码\03-Canvas中的合成" />
+      <recent name="C:\Users\Administrator\Desktop\HTML5_Canvas\03day\04源代码\02-Canvas像素操作" />
+      <recent name="C:\Users\Administrator\Desktop\HTML5_Canvas\03day\04源代码\01-Canvas绘制文本" />
+      <recent name="C:\Users\Administrator\Desktop\HTML5_Canvas\03day\04源代码\笔记" />
+      <recent name="C:\Users\Administrator\Desktop\HTML5_Canvas\03day\04源代码" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\HTML5_Canvas\03day\04源代码\code" />
+      <recent name="C:\Users\Administrator\Desktop\HTML5_Canvas\03day\04源代码\06-播放器\01-播放器的布局和实现" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2d99da38-43aa-4065-91fd-f08d91c02718" name="Default Changelist" comment="" />
+      <created>1557584629238</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1557584629238</updated>
+      <workItem from="1557584630427" duration="34678000" />
+      <workItem from="1557664327478" duration="16076000" />
+      <workItem from="1557707472980" duration="12137000" />
+      <workItem from="1557720168176" duration="13247000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="76138000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.498366" visible="true" weight="0.19494048" />
+      <window_info id="Structure" order="1" sideWeight="0.501634" side_tool="true" weight="0.5827011" />
+      <window_info id="Favorites" order="2" sideWeight="0.501634" side_tool="true" weight="0.5827011" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3268921" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32850242" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.less">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/06-播放器/css/reset.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/06-播放器/css/reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/06-播放器/01-播放器的布局和实现/01-播放器布局.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-791">
+          <folding>
+            <element signature="n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/06-播放器/03-播放器布局.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="53" column="15" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="15" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/06-播放器/js/drag.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="54" column="11" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/06-播放器/01-播放器的布局和实现/02-播放器布局.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2889">
+          <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#1303#1347#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/06-播放器/01-播放器的布局和实现/mycss/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-484">
+          <caret line="103" column="12" selection-start-line="103" selection-start-column="12" selection-end-line="103" selection-end-column="12" />
+          <folding>
+            <element signature="e#1113#1466#0" />
+            <element signature="e#1279#1458#0" />
+            <element signature="e#1880#1932#0" />
+            <element signature="e#1944#2077#0" />
+            <element signature="e#2128#2186#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/06-播放器/01-播放器的布局和实现/css/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2349" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/05-音视频操作/05-音视频相关的函数.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/06-播放器/04-播放器功能.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="154" column="124" selection-start-line="154" selection-start-column="124" selection-end-line="154" selection-end-column="124" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#1853#2166#0" />
+            <element signature="e#1956#2156#0" />
+            <element signature="e#3215#3239#0" />
+            <element signature="e#3333#3406#0" />
+            <element signature="e#3882#3914#0" />
+            <element signature="e#4641#4673#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/06-播放器/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-918">
+          <caret line="275" column="46" selection-start-line="275" selection-start-column="46" selection-end-line="275" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canvas.md" />
+    <entry file="file://$PROJECT_DIR$/笔记/01_音频&amp;视频.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/01-Canvas绘制文本/01-Canvas绘制文本.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="29" column="37" lean-forward="true" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/01-Canvas绘制文本/02-Canvas中文本对齐方式.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="43" column="30" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/01-Canvas绘制文本/05-Canvas中文本的宽度获取.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/04-Canvas导出/01-Canvas导出.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/04-Canvas导出/02-Canvas中的事件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="40" column="27" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/00-复习和课程介绍/00-复习.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="92" column="18" lean-forward="true" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
+          <folding>
+            <element signature="e#113#927#0" />
+            <element signature="e#932#939#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/00-复习和课程介绍/01-课程介绍.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-Canvas绘制文本/01-Canvas绘制文本.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="42" column="39" lean-forward="true" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="6127" column="4" selection-start-line="6127" selection-start-column="4" selection-end-line="6127" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/01-Canvas绘制文本/03-Canvas中文本基于基线对齐.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="36" column="28" lean-forward="true" selection-end-line="48" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/01-Canvas绘制文本/04-Canvas中文本的方向暂时无效果实验的.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="31" column="23" selection-end-line="41" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-Canvas绘制文本/04-Canvas绘制文本的方向暂时无效.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="41" column="7" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-Canvas绘制文本/03-Canvas绘制文本基于基线.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-Canvas绘制文本/02-Canvas绘制文本的对齐方式.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="50" column="19" lean-forward="true" selection-end-line="67" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/01-Canvas绘制文本/06-Canvas中文本居中.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/01-Canvas绘制文本/07-Canvas中文本阴影设置.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-Canvas绘制文本/06-Canvas绘制文本居中显示.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1161">
+          <caret line="43" column="5" selection-start-line="28" selection-start-column="2" selection-end-line="43" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-Canvas绘制文本/07-Canvas绘制文本的阴影.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="999">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/02-Canvas像素操作/02-Canvas中单个像素点操作.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="891">
+          <caret line="45" column="38" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-Canvas绘制文本/05-Canvas绘制文本获取宽度.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1053">
+          <caret line="39" column="38" selection-end-line="52" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/03-Canvas合成/test.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/06-播放器/05-播放器功能加载时间.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="689">
+          <caret line="229" column="47" selection-start-line="229" selection-start-column="47" selection-end-line="229" selection-end-column="47" />
+          <folding>
+            <element signature="e#8544#9912#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/06-播放器/css/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="670">
+          <caret line="168" column="18" selection-start-line="168" selection-start-column="18" selection-end-line="168" selection-end-column="18" />
+          <folding>
+            <element signature="e#1064#1400#0" />
+            <element signature="e#1418#1589#0" />
+            <element signature="e#1780#1832#0" />
+            <element signature="e#1846#2010#0" />
+            <element signature="e#2025#3428#0" />
+            <element signature="e#2065#2123#0" />
+            <element signature="e#2140#2594#0" />
+            <element signature="e#2620#3420#0" />
+            <element signature="e#3448#3834#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/02-Canvas像素操作/01-Canvas中像素操作.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="49" column="57" lean-forward="true" selection-start-line="49" selection-start-column="57" selection-end-line="49" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/02-Canvas像素操作/03-Canvas制作马赛克.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="44" column="47" lean-forward="true" selection-end-line="88" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-Canvas像素操作/lyml.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-Canvas像素操作/02-Canvas中单个像素点的操作.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="77" column="9" lean-forward="true" selection-start-line="60" selection-start-column="3" selection-end-line="77" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+            <element signature="e#1427#1691#0" />
+            <element signature="e#1779#2105#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-Canvas像素操作/01-Canvas像素操作.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="44" column="9" lean-forward="true" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-Canvas像素操作/03-Canvas获取像素数据的问题.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="39" lean-forward="true" selection-end-line="63" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-Canvas像素操作/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-Canvas像素操作/04-Canvas中马赛克的制作.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="50" column="63" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+            <element signature="e#2057#2383#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/03-Canvas合成/01-Canvas全局透明.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="31" column="16" lean-forward="true" selection-end-line="47" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-Canvas中的合成/01-Canvas中的全局透明.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/03-Canvas合成/02-Canvas中的合成属性.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="42" column="34" lean-forward="true" selection-end-line="75" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/03-Canvas合成/03-Canvas刮刮卡.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="102" column="22" lean-forward="true" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-Canvas中的合成/02-Canvas中的合成属性.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-350">
+          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-Canvas中的合成/03-Canvas刮刮卡.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
+          <folding>
+            <element signature="e#2064#2096#0" />
+            <element signature="e#2648#2680#0" />
+            <element signature="e#3115#3147#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

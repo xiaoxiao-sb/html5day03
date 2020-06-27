@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            background-color: #C7EDCC;
+        }
+
+        canvas {
+            border: 2px solid red;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+<canvas id="test" width="400" height="300"></canvas>
+<script type="text/javascript">
+
+    window.onload = function () {
+        var canvas = document.querySelector("#test");
+        if (!canvas.getContext) return;
+        var ctx = canvas.getContext("2d");
+        //绘制一个矩形
+        ctx.fillstyle = "red";
+        ctx.fillRect(0, 0, 100, 100);
+        //获取像素数据---返回的是IamgeData对象
+        /*
+        * 参数1:要提取的图像数据矩形的左上角x坐标
+        * 参数2:要提取的图像数据矩形的左上角y坐标
+        * 参数3:图像数据矩形的宽
+        * 参数4:图像数据矩形的高
+        * imageData中data是:横向像素点*竖向像素点*4的值(100*100*4)
+        * 4:RGBA----red---green----blue--- alpha 通道(透明度)
+        * 4个值都是:0-255
+        *
+        * */
+        var imageData = ctx.getImageData(0, 0, 100, 100);
+        //var imageData=ctx.createImageData(0,0,100,100);//自己创建
+        console.log(imageData);//像素数据对象
+        console.log(imageData.width);//横向的100个像素点
+        console.log(imageData.height);//竖向的100个像素点
+        //遍历所有的像素点
+        for (var i = 0; i < imageData.data.length; i++) {
+            //修改每个像素点的rgba值
+            imageData.data[4 * i] = 0;
+            imageData.data[4 * i + 1] = 255;
+            imageData.data[4 * i + 2] = 0;
+            imageData.data[4 * i + 3] = 255;
+        }
+        //重新绘制了(参数1:像素数据,偏移量x,偏移量y)
+        ctx.putImageData(imageData, 50, 50);
+
+
+    };
+</script>
+</body>
+</html>

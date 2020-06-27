@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            background-color: #C7EDCC;
+        }
+
+        canvas {
+            border: 2px solid red;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<canvas id="test" width="300" height="300"></canvas>
+<script type="text/javascript">
+    //页面加载
+    window.onload = function () {
+        //画布
+        var canvas = document.querySelector("#test");
+        if (!canvas.getContext) return;
+        var ctx = canvas.getContext("2d");
+
+        //把一个图片变成马赛克图片绘制到第一个图片的右侧区域(在画布上绘制)
+
+        //第一步-------把图片展示到画布上
+        var image = new Image();
+        image.src = "lyml.png";
+        //加载图片
+        image.onload = function () {
+            //设置画布的宽和高
+            canvas.width = image.width * 2;
+            canvas.height = image.height;
+            ctx.drawImage(image, 0, 0);//把图片绘制到画布上
+            //获取图片的像素数据
+            var oldImageData = ctx.getImageData(0, 0, image.width, image.height);
+            //创建一个新的像素数据(存储已经制作完成的像素数据---存马赛克的像素数据)
+            var newImageData = ctx.createImageData(image.width, image.height);
+            //定义一个size为5的的大小的块(5个像素为一 个单位),最终可以把整个图片横向分为width/5的这么多块
+            //纵向的块就是:height/size
+            var size = 5;
+            for (var i = 0; i < oldImageData.width / size; i++) {//i代表的行的size计算后的个数
+                for (var j = 0; j < oldImageData.height / size; j++) {//j代表的是列的size计算后的块数
+                    //从一块里找到某个随机像素点,获取这个像素点的颜色
+                    var x = Math.floor(Math.random() * size);//0-4(包含4)
+                    var y = Math.floor(Math.random() * size);//0-4(包含4)
+                    //i===0的时候,j可能是0,1,2,3,4
+                    var color = getPxColor(oldImageData,  i*size+x,j*size+y );
+                    // x=3 属于第一块的
+                    //y=3属于第一块的
+                     //把颜色重新的绘制到每个小块了
+                    for (var k = 0; k < size; k++) {
+                        for(var t=0;t<size;t++){
+                            //操作每个小块
+                            setPxColor(newImageData,i*size+k,j*size+t,color);
+                        }//end for
+                    }//end for
+                }// end for
+            }//end for
+            //把新的马赛克的像素数据绘制到canvas中
+            ctx.putImageData(newImageData,image.width,0);
+
+        };
+
+
+        //设置像素的颜色
+        function setPxColor(imageData, x, y, color) {
+            var width = imageData.width;
+            imageData.data[(y * width + x) * 4] = color[0];
+            imageData.data[(y * width + x) * 4 + 1] = color[1];
+            imageData.data[(y * width + x) * 4 + 2] = color[2];
+            imageData.data[(y * width + x) * 4 + 3] = color[3];
+        }
+
+        //给我像素数据,横坐标,和纵坐标,我就把这个坐标的颜色给你返回去
+        function getPxColor(imageData, x, y) {
+            var color = [];
+            var width = imageData.width;//宽--像素的个数
+            color[0] = imageData.data[(y * width + x) * 4];
+            color[1] = imageData.data[(y * width + x) * 4 + 1];
+            color[2] = imageData.data[(y * width + x) * 4 + 2];
+            color[3] = imageData.data[(y * width + x) * 4 + 3];
+            return color;
+        }
+    };
+</script>
+</body>
+</html>

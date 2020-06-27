@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>$永远24K纯帅的$</title>
+  <link rel="stylesheet" href="mycss/index.css">
+</head>
+<body>
+<div id="wrap">
+  <video id="video" src="https://blz-videos.nosdn.127.net/1/OverWatch/AnimatedShots/Overwatch_AnimatedShot_Soldier76_Hero.mp4"></video>
+  <!--控件区-->
+  <div class="controls">
+    <!--左侧开始和停止-->
+    <div class="btns">
+      <span class="start" id="start"></span>
+      <span class="stop" id="stop"></span>
+    </div>
+    <!--中间播放进度条-->
+    <div class="progress">
+      <div class="container">
+        <div class="inner"></div>
+      </div>
+      <div class="deeppink"></div>
+    </div>
+    <!--右侧时间,音量,全屏-->
+    <div class="time-sound">
+      <div class="time">
+        <span>00:00:00/00:00:00</span>
+      </div>
+      <div class="sound">
+        <div class="muted">
+          <span></span>
+        </div>
+        <div class="progress-sound">
+          <div class="container-sound">
+            <div class="inner-sound"></div>
+          </div>
+          <div class="deeppink-sound"></div>
+        </div>
+      </div>
+      <div class="full-screen">
+        <span></span>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/drag.js" type="text/javascript"></script>
+<script type="text/javascript">
+  //封装获取元素
+  function my$(id) {
+    return document.querySelector(id);
+  }
+
+  //页面加载
+  window.onload = function () {
+    //获取video
+    var video = my$("#video");
+    //获取控件
+    var controls = my$("#wrap>.controls");
+    //获取进度条
+    var progress = my$("#wrap>.controls>.progress");
+    //获取inner进度条按钮
+    var inner = my$("#wrap>.controls>.progress>.container>.inner");
+    //获取移动的deeppink进度条
+    var deepPink = my$("#wrap>.controls>.progress>.deeppink");
+    //获取音量的inner-sound
+    var innerSound = my$("#wrap>.controls>.time-sound>.sound>.progress-sound>.container-sound>.inner-sound");
+    //获取音量的进度条deeppink-sound
+    var deepPinkSound = my$("#wrap>.controls>.time-sound>.sound>.progress-sound>.deeppink-sound");
+    //获取的是播放按钮和停止按钮
+    var start = my$("#start");
+    var stop = my$("#stop");
+
+
+    //页面加载后直接设置video全屏显示
+    video.width = document.documentElement.clientWidth;
+    video.height = document.documentElement.clientHeight - controls.clientHeight;
+
+    //浏览器的窗口调整大小事件
+    window.onresize = function () {
+      //调整浏览器窗口大小的时候,如果宽度大于600,就设置video的宽和高
+      if (document.documentElement.clientWidth >= 600) {
+        video.width = document.documentElement.clientWidth;
+        video.height = document.documentElement.clientHeight - controls.clientHeight;
+      }
+    };
+
+
+    var timeId = 0;//记录定时器的id值
+    //功能函数
+    myPlayer();
+
+    //播放和暂停,进度条的功能
+    function myPlayer() {
+
+      //播放功能
+      start.onclick = function () {
+        //判断是否暂停,如果是暂停,显示对应的图片
+        if (video.paused) {
+          //修改类样式
+          addClass(this, "active");
+          //播放
+          video.play();
+          //不停的设置进度条
+          timeId = setInterval(move, 100);
+          //==========================
+        } else {
+          //此时是播放状态,干掉暂停的图片效果
+          removeClass(this, "active");
+          video.pause();
+          //清理定时器
+          clearInterval(timeId);
+        }
+      };
+      //停止功能
+      stop.onclick = function () {
+        //干掉类样式
+        removeClass(start, "active");
+        //停止播放
+        video.pause();
+        //清理定时器
+        clearInterval(timeId);
+        //干掉进度条的款和拖拽按钮的left
+        inner.style.left = deepPink.style.width = 0 + "px";
+        //设置当前播放时间为0
+        video.currentTime = 0;
+      };
+      //进度条功能===有一个天坑谷歌(本地的视频资源,你会发现,video的currentTime赋值后,仍然是0，所以无法实现点击进度条快进播放)
+      progress.onclick = function (e) {
+        e = e || window.event;
+        //首先设置播放,和播放按钮的显示效果
+        addClass(start, "active");
+        video.play();
+        //设置进度条的显示
+        timeId = setInterval(move, 100);
+        //设置当前播放的时间
+        //总时间*(鼠标的可视区域的横坐标-当前进度条的offsetLeft)/(进度条的宽-拖拽按钮的宽)
+
+        video.currentTime = video.duration*((e.clientX - this.offsetLeft) / (progress.clientWidth - inner.offsetWidth));
+      };
+
+
+      //移动进度条的函数
+      function move() {
+        //进度条按钮的left设置
+        //进度条按钮的left-进度条的宽=(当前播放时间/总时间)*(容器进度条的宽-进度条按钮的宽)
+        // inner.style.left = deepPink.style.width = (video.currentTime / video.duration) * (progress.clientWidth - inner.offsetWidth) + "px";
+
+        inner.style.left = deepPink.style.width = (video.currentTime / video.duration) * (progress.clientWidth - inner.offsetWidth) + "px";
+        console.log(video.currentTime);
+
+      }
+    }
+
+
+    var callback1 = {
+      move: function () {
+        //设置当前拖拽的时候 进度条的width是当前拖拽按钮的offsetLeft
+        deepPink.style.width = this.offsetLeft + "px";
+      }
+    };
+    var callback2 = {
+      move: function () {
+        //设置当前拖拽的时候 进度条的width是当前拖拽按钮的offsetLeft
+        deepPinkSound.style.width = this.offsetLeft + "px";
+      }
+    };
+    //设置拖拽
+
+    $.drag(inner, callback1);
+    $.drag(innerSound, callback2);
+
+
+    //工具类
+    //添加类样式
+    function addClass(node, className) {
+      var reg = new RegExp("\\b" + className + "\\b");
+      if (!reg.test(node.className)) {
+        node.className += (" " + className);
+      }
+    }
+
+    //移除类样式
+    function removeClass(node, className) {
+      if (node.className) {
+        var reg = new RegExp("\\b" + className + "\\b");
+        var classes = node.className;
+        node.className = classes.replace(reg, "");
+        if (/^\s*$/g.test(node.className)) {
+          node.removeAttribute("class");
+        }
+      } else {
+        node.removeAttribute("class");
+      }
+    }
+  };
+</script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="wrap">
+    <video id="video"
+           src="https://blz-videos.nosdn.127.net/1/OverWatch/AnimatedShots/Overwatch_AnimatedShot_Soldier76_Hero.mp4"></video>
+    <!--控件区-->
+    <div class="controls">
+        <!--左侧按钮区-->
+        <div class="btns">
+            <span class="start"></span>
+            <span class="stop"></span>
+        </div>
+        <!--中间进度条区-->
+        <div class="progress">
+            <div class="container">
+                <div class="inner"></div>
+            </div>
+            <div class="deeplink"></div>
+        </div>
+        <!--右侧音量和全屏区-->
+        <div class="time-sound">
+            <div class="time">
+                <span class="now">00:00:000</span><span class="all">00:00:00</span>
+            </div>
+            <div class="sound">
+                <div class="muted">
+                    <span></span>
+                </div>
+                <div class="sound-progress">
+                    <div class="sound-container">
+                        <div class="sound-inner"></div>
+                    </div>
+                    <div class="sound-link"></div>
+                </div>
+            </div>
+            <div class="full-screen">
+                <span></span>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/drag.js"></script>
+<script type="text/javascript">
+    //页面加载
+    window.onload = function () {
+
+        //获取最外面的wrap
+        var wrap = document.querySelector("#wrap");
+        //获取video
+        var video = document.querySelector("#video");
+        //获取控件区
+        var controls = document.querySelector(".controls");
+        //获取开始按钮
+        var start = document.querySelector(".start");
+        //获取暂停按钮
+        var stop = document.querySelector(".stop");
+        //获取进度条
+        var progress = document.querySelector(".progress");
+        //获取中间的进度条
+        var deeplink = document.querySelector(".deeplink");
+        //获取中间进度条拖动按钮
+        var inner = document.querySelector(".inner");
+        //获取显示时间的div
+        var time = document.querySelector(".time");
+        //显示时间的div里面的两个span
+        var timeNow = document.querySelector(".now");
+        //显示所有时间的span
+        var timeAll = document.querySelector(".all");
+        //获取声音的进度条
+        var soundLink = document.querySelector(".sound-link");
+        //获取声音的拖动按钮
+        var soundInner = document.querySelector(".sound-inner");
+        //获取静音的div中的span
+        var mutedSpan = document.querySelector(".muted>span");
+        //获取全屏div中的span
+        var fullScreenSpan = document.querySelector(".full-screen>span");
+
+
+        //设置全屏
+        video.width = document.documentElement.clientWidth;
+        video.height = document.documentElement.clientHeight - controls.clientHeight;
+        //窗口调整大小的事件
+        window.onresize = function () {
+            //如果可视区域的宽度大于600,就设置播放器的宽和高
+            if (document.documentElement.clientWidth >= 600) {
+                //设置全屏
+                video.width = document.documentElement.clientWidth;
+                video.height = document.documentElement.clientHeight - controls.clientHeight;
+            }
+        };
+
+        myPlayer();
+        //第一步:设置拖拽播放的进度条==================
+        var innerCall = {
+            move: function () {
+                deeplink.style.width = this.offsetLeft + "px";
+            }
+        };
+        //设置拖拽音量的进度条
+        var soundCall = {
+            move: function () {
+                soundLink.style.width = this.offsetLeft + "px";
+            }
+        };
+        //播放和音量的拖拽实现
+        $.drag(inner, innerCall);
+        $.drag(soundInner, soundCall);
+
+        //第二步:播放和暂停================================
+        function myPlayer() {
+            //定时器的id值-------------------目前定义在这
+            var timeId = 0;
+            //播放
+            start.onclick = function () {
+                //先判断是否暂停,然后切换类样式显示对应的图片
+                if (video.paused) {
+                    //此时是暂停,修改样式切换,同时设置播放,进度条移动
+                    this.classList.toggle("active");
+                    video.play();
+                    timeId = setInterval(move, 100);
+                } else {
+                    //此时是播放,修改样式切换,同时设置暂停,停止移动进度条
+                    this.classList.toggle("active");
+                    video.pause();
+                    clearInterval(timeId);
+                }
+            };
+            //暂停
+            stop.onclick = function () {
+                //去掉播放按钮的类样式,停止播放,清理定时器,设置进度条的宽慰0,和拖拽按钮的left为0,设置当前播放时间为0
+                start.classList.remove("active");
+                video.pause();
+                clearInterval(timeId);
+                video.currentTime=0;
+                inner.style.left=deeplink.style.width="0px";
+            };
+            //快进功能(点击进度条)
+            //进度条功能===有一个天坑谷歌(本地的视频资源,你会发现,video的currentTime赋值后,仍然是0，所以无法实现点击进度条快进播放)
+            progress.onclick = function (e) {
+                e = e ||window.event;
+                //设置播放按钮的状态类样式为acitve
+                //开始播放状态
+                //开启定时器
+                //设置当前时间
+                start.classList.add("active");
+                video.play();
+                timeId=setInterval(move,100);
+                //总时间*(当前鼠标的横坐标-progress的offsetLeft)/(进度条的宽-拖拽按钮的宽)
+                video.currentTime=video.duration*((e.clientX-progress.offsetLeft)/(progress.clientWidth-inner.offsetWidth));
+            };
+
+            //移动进度条的函数
+            function move() {
+                //进度条拖拽按钮的left设置和移动的进度条的宽一致
+                //(是一个比例:(当前时间/总时间)*(容器进度条的宽-拖拽按钮的宽))
+                inner.style.left = deeplink.style.width = ((video.currentTime / video.duration) * (progress.clientWidth - inner.offsetWidth)) + "px";
+            }
+
+        }
+
+    };
+</script>
+</body>
+</html>

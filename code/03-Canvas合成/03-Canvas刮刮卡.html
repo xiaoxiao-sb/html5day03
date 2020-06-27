@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!--viewport:虚拟的窗口,device-width:正常的显示宽-->
+    <!--    width=device-width ：表示宽度是设备屏幕的宽度-->
+    <!--    initial-scale=1.0：表示初始的缩放比例-->
+    <!--    minimum-scale=0.5：表示最小的缩放比例-->
+    <!--    maximum-scale=2.0：表示最大的缩放比例-->
+    <!--    user-scalable=yes：表示用户是否可以调整缩放比例-->
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"></meta>
+
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        canvas {
+            position: absolute;
+            left: 0;
+            right: 0;
+            /*background-color: pink;*/
+        }
+
+        /*设置wrap和ul 和li 的高*/
+        #wrap, ul, ul > li {
+            height: 100%;
+        }
+
+        /*设置li的背景图片和位置*/
+        ul > li {
+            background: url("img/b.png");
+            background-size: 100% 100%;
+        }
+
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <canvas id="test"></canvas>
+    <ul>
+        <li></li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+
+    //touchstart事件：当手指触摸屏幕时候触发，即使已经有一个手指放在屏幕上也会触发。
+    //touchmove事件：当手指在屏幕上滑动的时候连续地触发。在这个事件发生期间，调用preventDefault()事件可以阻止滚动。
+    //touchend事件：当手指从屏幕上离开的时候触发。
+    //touchcancel事件：当系统停止跟踪触摸的时候触发。关于这个事件的确切出发时间，文档中并没有具体说明，咱们只能去猜测了。
+    //changedTouches-----是多个触点的数组,通过事件参数对象获取
+
+    //页面加载
+    window.onload = function () {
+        //画布和绘制对象
+        var canvas = document.querySelector("#test");
+        canvas.width = document.documentElement.clientWidth;
+        canvas.height = document.documentElement.clientHeight;
+        if (!canvas.getContext) return;
+        var ctx = canvas.getContext("2d");
+        //绘制图片并把图片绘制到画布上
+        var image =new Image();
+        image.src = "img/a.png";
+        image.onload = function () {
+            //var flag=0;//透明像素点的个数
+            //直接铺满画板
+            ctx.drawImage(image,0,0, canvas.width, canvas.height);
+            //为画板添加鼠标按下事件(移动端就是触屏事件)
+            canvas.addEventListener("touchstart",function (e) {
+               e= e ||window.event;
+               //获取多个触点的某个触点
+                var touchC=e.changedTouches[0];
+                //触屏的时候获取触屏点相对于画板的的横纵坐标
+                var x=touchC.clientX-canvas.offsetLeft;
+                var y=touchC.clientY-canvas.offsetTop;
+
+                //绘制----先设置合成的效果
+                ctx.globalCompositeOperation="destination-out";//显示老的图片没有重叠的,其他的透明
+                //设置画线的宽度,线的两端样式和连接样式
+                ctx.lineCap="round";
+                ctx.lineJoin="round";
+                ctx.lineWidth=50;
+                //保存状态,
+                ctx.save();
+                ctx.beginPath();
+                ctx.moveTo(x,y);
+                ctx.lineTo(x+1,y+1);
+                ctx.stroke();
+                //恢复状态
+                ctx.restore();
+            });
+            //添加鼠标移动事件(移动端的滑屏事件)
+            canvas.addEventListener("touchmove",function (e) {
+               e = e || window.event;
+               //再次获取触点和和滑动的坐标,然后再画线
+                var touchC=e.changedTouches[0];
+                var x=touchC.clientX-canvas.offsetLeft;
+                var y=touchC.clientY-canvas.offsetTop;
+                ctx.save();
+                ctx.lineTo(x,y);
+                ctx.stroke();
+                ctx.restore();
+            });
+
+            //鼠标抬起事件(移动端离开触屏事件)
+            canvas.addEventListener("touchend",function () {
+               //获取画布所有的像素点,如果滑屏的像素点超过了所有像素点的一半,则设置为透明效果
+               var imageData=ctx.getImageData(0,0,canvas.width,canvas.height);
+               //总像素的个数
+               var allPx=imageData.width*imageData.height;
+               //遍历每个像素,然后计算每个像素的透明的个数
+                var flag=0;
+                for(var i=0;i<allPx;i++){
+                    if(imageData.data[4*i+3]===0){
+                        flag++;
+                    }
+                }//end for
+                if(flag>allPx/2){
+                    canvas.style.opacity=0;
+                    canvas.style.transition="1s";
+                }
+            });
+            //画布的过渡事件完成后移除canvas
+            canvas.addEventListener("transitionend",function () {
+                this.remove();
+            });
+        };
+
+    };
+</script>
+</body>
+
+</html>

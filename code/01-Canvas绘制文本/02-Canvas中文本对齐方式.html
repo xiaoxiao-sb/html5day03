@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        html,body{
+            background-color: #C7EDCC;
+        }
+        canvas{
+            border:2px solid red;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<canvas id="test" width="400" height="300"></canvas>
+<script type="text/javascript">
+
+    window.onload=function () {
+        var canvas=document.querySelector("#test");
+        if(!canvas.getContext)return;
+        var ctx=canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(200,0);
+        ctx.lineTo(200,300);
+        ctx.stroke();
+        var gradient=ctx.createLinearGradient(0,0,400,300);
+        gradient.addColorStop(0,"red");
+        gradient.addColorStop(.5,"green");
+        gradient.addColorStop(1,"blue");
+        ctx.strokeStyle=gradient;
+        ctx.fillStyle=gradient;
+        ctx.font="40px sans-serif";
+        //对齐方式
+        //默认是start,基于当前x(下面的200或者100)的一半的位置开始绘制
+        //end就在右边
+        //center在中间
+        //left和right会发现和start和end效果一样
+        ctx.textAlign="start";
+
+        ctx.strokeText("谢谢惠顾",200,100);
+        ctx.fillText("谢谢惠顾",100,150);
+    };
+</script>
+</body>
+</html>

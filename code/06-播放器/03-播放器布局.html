@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="wrap">
+    <video id="video"
+           src="https://blz-videos.nosdn.127.net/1/OverWatch/AnimatedShots/Overwatch_AnimatedShot_Soldier76_Hero.mp4"></video>
+    <!--控件区-->
+    <div class="controls" id="controls">
+        <!--左侧按钮区-->
+        <div class="btns">
+            <span class="start"></span>
+            <span class="stop"></span>
+        </div>
+        <!--中间进度条区-->
+        <div class="progress">
+            <div class="container">
+                <div class="inner"></div>
+            </div>
+            <div class="deeplink"></div>
+        </div>
+        <!--右侧音量和全屏区-->
+        <div class="time-sound">
+            <div class="time">
+                <span>00:00:000</span><span>00:00:00</span>
+            </div>
+            <div class="sound">
+                <div class="muted">
+                    <span></span>
+                </div>
+                <div class="sound-progress">
+                    <div class="sound-container">
+                        <div class="sound-inner"></div>
+                    </div>
+                    <div class="sound-link"></div>
+                </div>
+            </div>
+            <div class="full-screen">
+                <span></span>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    //页面加载
+    window.onload = function () {
+
+        //获取video
+        var video = document.querySelector("#video");
+        //获取控件区
+        var controls = document.querySelector("#controls");
+        //设置全屏
+        video.width = document.documentElement.clientWidth;
+        video.height = document.documentElement.clientHeight - controls.clientHeight;
+        //窗口调整大小的事件
+        window.onresize = function () {
+            //如果可视区域的宽度大于600,就设置播放器的宽和高
+            if (document.documentElement.clientWidth >= 600) {
+                //设置全屏
+                video.width = document.documentElement.clientWidth;
+                video.height = document.documentElement.clientHeight - controls.clientHeight;
+            }
+        };
+    };
+</script>
+</body>
+</html>
